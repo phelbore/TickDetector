@@ -1,0 +1,24 @@
+<html><body>
+<table border='1'>
+	<form action='api/testTicks' method='get' target='results'>
+		<input type=hidden name='table' value='true'/>
+		<tr>
+			<td>Freshness (seconds)</td>
+			<td><input type=text name='freshness' value='7200'></input></td>
+		</tr>
+		<tr>
+			<td>Threshold</td>
+			<td><input type=text name='threshold' value='5'></input></td>
+		</tr>
+		<tr>
+			<td>Delta (seconds)</td>
+			<td><input type=text name='delta' value='1800'></input></td>
+		</tr>
+		<tr><td span='2'><input type='submit'>
+	</form>
+</table>
+<br/>
+<br/>
+<br/>
+<iframe name='results' width='100%' height='75%' scrolling='yes'>
+</body></html>

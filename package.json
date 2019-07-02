@@ -1,0 +1,31 @@
+{
+  "name": "tick-detector",
+  "version": "1.0.0",
+  "description": "Elite Dangerous tick detector",
+  "main": "tick.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "docs/*"
+    ]
+  },
+  "keywords": [],
+  "author": "phelbore",
+  "license": "WTFPL",
+  "dependencies": {
+    "better-sqlite3": ">=5.0.1",
+    "density-clustering": ">=1.3.0",
+    "express": ">=4.16.4",
+    "moment": ">=2.22.2",
+    "node-json2html": "^1.2.0",
+    "path": ">=0.12.7",
+    "request": "^2.88.0",
+    "socket.io": ">=2.1.1",
+    "zeromq": ">=5.1.0",
+    "zlib": ">=1.0.5"
+  },
+  "devDependencies": {}
+}
