@@ -9,7 +9,7 @@ const Database = require('better-sqlite3');
 const moment = require('moment');
 const path = require('path');
 const clustering = require('density-clustering');
-const io = require('socket.io')(31173, {pingTimeout: 30000});
+const io = require('socket.io')(31173, {pingTimeout: 30000, allowEIO3: true});
 const express = require('express');
 const app = express();
 const router = express.Router();
@@ -22,6 +22,7 @@ const util = require('util');
 var lock = false;
 
 config();
+console.log('Tick Publisher started');
 
 function config() {
 //Express
@@ -79,7 +80,10 @@ function configAPI() {
 		let end = req.query['end']?req.query['end']:new Date();
 		res.json(getTicks(start, end));
 	});
-	
+
+	router.get('/tick', (req, res) => {
+		res.json(getLastTick());
+	});
 }
 
 function getLastTick() {
