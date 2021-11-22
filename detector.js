@@ -20,6 +20,7 @@ const thanks = ['Garud',
 									'Lyrae Cursorius']
 
 config();
+console.log('EDDN Processor started');
 
 function config() {
 	setInterval(getEntries, 1000);
